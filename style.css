@@ -1,0 +1,93 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+
+button,
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.calculator {
+  width: 320px;
+  height: 500px;
+  background-color: #000;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  width: 100%;
+  height: 80px;
+  background-color: #000;
+  color: #fff;
+  font-size: 35px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  aspect-ratio: 1;
+  font-size: 20px;
+  border: none;
+  border-radius: 100px;
+  color: #fff;
+}
+
+.gray {
+  background-color: #a5a5a5;
+}
+
+.dark-gray {
+  background-color: #333;
+}
+
+.orange {
+  background-color: #f5902e;
+}
+
+.span-two {
+  grid-column: span 2;
+  aspect-ratio: auto;
+  border-radius: 100px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+button.On-Progress {
+  opacity: 60%;
+  cursor: no-drop;
+}
+
+/* Show #cursor on devices larger than tablets (e.g., desktops) */
+@media (min-width: 768px) {
+  /*  */
+}
