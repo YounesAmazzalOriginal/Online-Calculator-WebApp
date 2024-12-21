@@ -1,24 +1,25 @@
 // () Symbol witch Between ) & (
-// let parenthesesSwitcher = false;
-// function parenthesesSymbol() {
-//   var display = document.querySelector("#display");
+let parenthesesSwitcher = false;
+function parenthesesSymbol() {
+  var display = document.querySelector("#display");
 
-//   if (parenthesesSwitcher === false) {
-//     parenthesesSwitcher = true;
+  if (parenthesesSwitcher === false) {
+    parenthesesSwitcher = true;
 
-//     display.value += "(";
-//   }
-//   //
-//   else {
-//     parenthesesSwitcher = false;
+    display.value += "(";
+  }
+  //
+  else {
+    parenthesesSwitcher = false;
 
-//     display.value += ")";
-//   }
-// }
+    display.value += ")";
+  }
+}
 
 // Numbers
 function btn(numTarget) {
   var display = document.querySelector("#display");
+
   if (numTarget == "x") {
     numTarget = "*";
   }
@@ -44,7 +45,6 @@ function backSpace() {
 }
 
 // Calcule Operations
-
 function displayResault() {
   var display = document.querySelector("#display");
   var archive = document.querySelector(".archive");
@@ -65,3 +65,30 @@ function displayResault() {
     }
   } catch (error) {}
 }
+
+// Custom Alert & Seconds Counter 3 2 1
+window.onload = function () {
+  var alertContainer = document.querySelector(".alertContainer");
+  var alertCounter = document.querySelector(".alert-counter");
+
+  alertCounter.textContent = 4;
+
+  let count = alertCounter.textContent;
+
+  const intervalCount = setInterval(() => {
+    if (count > 0) {
+      count--;
+      alertCounter.textContent = count;
+    } else {
+      clearInterval(intervalCount);
+    }
+  }, 1000);
+  //
+  const intervalDisplay = setInterval(() => {
+    if (count === 0) {
+      // alertContainer.style.display = "none";
+      alertContainer.classList.add("hidden");
+      clearInterval(intervalDisplay);
+    }
+  }, 3000);
+};

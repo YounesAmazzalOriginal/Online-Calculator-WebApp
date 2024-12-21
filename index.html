@@ -22,19 +22,27 @@
   </head>
   <body>
     <div class="calculator">
+      <div class="alertContainer">
+        <div class="customAlert">
+          If the input length exceeds 10 characters, the text size will not
+          change :
+          <span class="alert-counter-container"
+            >Wait <span span class="alert-counter"></span> Seconds</span
+          >
+        </div>
+      </div>
       <input
         type="text"
         class="display"
         id="display"
-        readonly
         placeholder="0"
+        readonly
       />
       <div class="buttons">
         <button onclick="clearDisplay()" class="gray">AC</button>
         <button onclick="btn('/')" class="gray">÷</button>
 
-        <button class="gray On-Progress" title="On Progress">()</button>
-        <!-- <button class="gray On-Progress" onclick="parenthesesSymbol()"> -->
+        <button class="gray" onclick="parenthesesSymbol()">( )</button>
 
         <button onclick="backSpace()" class="gray">
           <i class="fa-solid fa-delete-left"></i>
@@ -42,7 +50,7 @@
         <button onclick="btn('7')" class="dark-gray">7</button>
         <button onclick="btn('8')" class="dark-gray">8</button>
         <button onclick="btn('9')" class="dark-gray">9</button>
-        <button onclick="btn('*')" class="orange">×</button>
+        <button onclick="btn('*')" class="orange">x</button>
         <button onclick="btn('4')" class="dark-gray">4</button>
         <button onclick="btn('5')" class="dark-gray">5</button>
         <button onclick="btn('6')" class="dark-gray">6</button>

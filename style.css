@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #000;
+  background-color: #00000000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,13 +29,51 @@ input {
   border-radius: 20px;
   padding: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+.calculator .alertContainer {
+  background-color: #1d1d1ddc;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.7s, opacity 0.7s;
+}
+.calculator .alertContainer.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.7s, opacity 0.7s;
+}
+.calculator .alertContainer .customAlert {
+  background-color: #333;
+  color: #a5a5a5;
+  border-radius: 7px;
+  line-height: 22px;
+  width: 80%;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 14px;
+}
+.calculator .alertContainer .customAlert .alert-counter {
+  color: #f5902e;
+  font-size: 17px;
 }
 
 .display {
-  width: 100%;
+  width: 280px;
   height: 80px;
   background-color: #000;
-  color: #fff;
+  color: white;
   font-size: 35px;
   text-align: right;
   padding: 10px;
@@ -58,6 +96,7 @@ button {
   border: none;
   border-radius: 100px;
   color: #fff;
+  cursor: pointer;
 }
 
 .gray {
@@ -87,7 +126,7 @@ button.On-Progress {
   cursor: no-drop;
 }
 
-/* Show #cursor on devices larger than tablets (e.g., desktops) */
+/* Show Elements on devices larger than tablets (e.g., desktops) */
 @media (min-width: 768px) {
   /*  */
 }
